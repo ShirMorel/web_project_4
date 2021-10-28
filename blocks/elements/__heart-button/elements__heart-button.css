@@ -1,0 +1,18 @@
+.elements__heart-button {
+  background-image: url(../../../images/heart.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 21px;
+  height: 19px;
+  border: transparent;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.elements__heart-button:hover {
+  opacity: 0.5;
+}
+
+.elements__heart-button:active {
+  background-image: url(../../../images/Union.png);
+}

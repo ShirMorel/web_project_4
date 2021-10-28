@@ -1,16 +1,7 @@
-# Project 4: Around The U.S.
+Project name: Around The U.S.
 
-### Overview
+Description: the project is about places around the U.S.
 
-* Figma
-* Images
+I used grid, flex, absolut positioning, forms, functions and more to make this project.
 
-**Figma**
-
-* [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
-
-**Images**
-
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-
-Have fun with JavaScript!
+link to GitHub Pages:

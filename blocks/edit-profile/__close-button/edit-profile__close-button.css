@@ -1,0 +1,26 @@
+.edit-profile__close-button {
+  background-image: url(../../../images/CloseIcon.png);
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+  transform: translate(40px, -40px);
+  position: absolute;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.edit-profile__close-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width:768px) {
+  .edit-profile__close-button {
+    width: 26px;
+    height: 26px;
+    transform: translate(0px, -52px);
+  }
+}

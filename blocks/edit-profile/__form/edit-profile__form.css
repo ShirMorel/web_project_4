@@ -1,0 +1,21 @@
+.edit-profile__form {
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  top: 195px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width:768px) {
+  .edit-profile__form {
+    width: 282px;
+    height: 322px;
+    top: 123px;
+  }
+}

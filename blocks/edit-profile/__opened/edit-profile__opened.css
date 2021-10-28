@@ -1,0 +1,4 @@
+.edit-profile__opened {
+  display:flex;
+  visibility: initial;
+}
