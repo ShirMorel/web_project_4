@@ -1,5 +1,5 @@
 .body {
-  font-family: 'Inter', 'arial', 'sans-serif';
+  font-family: 'Inter', 'arial', sans-serif;
   background-color: black;
   min-width: 320px;
   display: flex;

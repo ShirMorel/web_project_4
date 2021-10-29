@@ -1,0 +1,6 @@
+.edit-profile__container {
+  display: flex;
+  max-height: 330px;
+  position: relative;
+  align-self: center;
+}

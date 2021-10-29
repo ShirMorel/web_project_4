@@ -2,16 +2,31 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 358px;
-  min-height: 27.26px;
+  min-height: 14px;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 13.26px;
+  margin: 54px 36px 0;
+}
+
+.edit-profile__input:last-of-type {
+  padding-bottom: 13.34px;
+  margin: 29.74px 36px 0;
 }
 
 @media screen and (max-width:768px) {
   .edit-profile__input {
     width: 238px;
-    min-height: 26px;
+    height: 17px;
+    margin: 76px 22px 0;
+    padding-bottom: 9px;
+  }
+  .edit-profile__input:last-of-type {
+    margin: 30px 22px 0;
   }
 }

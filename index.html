@@ -20,62 +20,53 @@
         <div class="profile__info">
           <div class="profile__user">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button aria-label="edit" class="profile__edit-button" type="button"></button>
           </div>
           <p class="profile__description">Explorer</p>
         </div>
-        <button class="profile__add-button" type="button"></button>
-      </section>
-      <section class="edit-profile">
-        <form class="edit-profile__form">
-          <button class="edit-profile__close-button" type="button"></button>
-          <h2 class="edit-profile__title">Edit profile</h2>
-          <input class="edit-profile__input edit-profile__input_name" type="text" placeholder="Name">
-          <input class="edit-profile__input edit-profile__input_about" type="text" placeholder="About me">
-          <button class="edit-profile__save-button" type="submit">Save</button>
-        </form>
+        <button aria-label="add" class="profile__add-button" type="button"></button>
       </section>
       <section class="elements">
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-10884041-unsplash.png" alt="Yosemite Valley">
           <div class="elements__info">
             <h3 class="elements__description">Yosemite Valley</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-1404681-unsplash.png" alt="Lake Louise">
           <div class="elements__info">
             <h3 class="elements__description">Lake Louise</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-1556355-unsplash.png" alt="Bald Mountains">
           <div class="elements__info">
             <h3 class="elements__description">Bald Mountains</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-14046812-unsplash.png" alt="Latemar">
           <div class="elements__info">
             <h3 class="elements__description">Latemar</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-15563556-unsplash.png" alt="Vanoise Nationa...">
           <div class="elements__info">
             <h3 class="elements__description">Vanoise National Park</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
         <div class="elements__card">
           <img class="elements__photo" src="./images/kirill-pershin-1088404-unsplash.png" alt="Lago di Braies">
           <div class="elements__info">
             <h3 class="elements__description">Lago di Braies</h3>
-            <button class="elements__heart-button" type="button"></button>
+            <button aria-label="like" class="elements__heart-button" type="button"></button>
           </div>
         </div>
       </section>
@@ -83,6 +74,17 @@
     <footer class="footer">
       <p class="footer__copyrights">&copy; 2021 Around The U.S.</p>
     </footer>
+    <section class="edit-profile">
+      <div class="edit-profile__container">
+        <button aria-label="close" class="edit-profile__close-button" type="button"></button>
+        <form name="edit-form" class="edit-profile__form">
+          <h2 class="edit-profile__title">Edit profile</h2>
+          <input class="edit-profile__input edit-profile__input_name" type="text" placeholder="Name">
+          <input class="edit-profile__input edit-profile__input_about" type="text" placeholder="About me">
+          <button aria-label="save" class="edit-profile__save-button" type="submit">Save</button>
+        </form>
+      </div>
+    </section>
   </div>
   <script src="./index.js"></script>
 </body>

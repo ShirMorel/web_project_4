@@ -3,12 +3,14 @@
   height: 40px;
   width: 40px;
   border: none;
+  outline: none;
   background-color: transparent;
   padding: 0;
   background-position: center;
   background-repeat: no-repeat;
   align-self: flex-end;
-  transform: translate(40px, -40px);
+  top: -40px;
+  right: -40px;
   position: absolute;
   transition: opacity 0.2s ease-in-out 0s;
 }
@@ -21,6 +23,7 @@
   .edit-profile__close-button {
     width: 26px;
     height: 26px;
-    transform: translate(0px, -52px);
+    margin-bottom: 13.62px;
+    right: 0;
   }
 }
