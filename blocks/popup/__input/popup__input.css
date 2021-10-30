@@ -1,4 +1,4 @@
-.edit-profile__input {
+.popup__input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   outline: none;
@@ -15,19 +15,19 @@
   margin: 54px 36px 0;
 }
 
-.edit-profile__input:last-of-type {
+.popup__input:last-of-type {
   padding-bottom: 13.34px;
   margin: 29.74px 36px 0;
 }
 
 @media screen and (max-width:768px) {
-  .edit-profile__input {
+  .popup__input {
     width: 238px;
     height: 17px;
     margin: 76px 22px 0;
     padding-bottom: 9px;
   }
-  .edit-profile__input:last-of-type {
+  .popup__input:last-of-type {
     margin: 30px 22px 0;
   }
 }

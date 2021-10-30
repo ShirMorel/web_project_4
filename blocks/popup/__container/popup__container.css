@@ -1,6 +1,5 @@
-.edit-profile__container {
+.popup__container {
   display: flex;
-  max-height: 330px;
   position: relative;
   align-self: center;
 }

@@ -1,12 +1,13 @@
-let profileName = document.querySelector('.profile__name');
-let profileDescription = document.querySelector('.profile__description');
-let profileEditButton = document.querySelector('.profile__edit-button');
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+const profileEditButton = document.querySelector('.profile__edit-button');
 
-let popup = document.querySelector('.edit-profile');
-let popupCloseButton = document.querySelector('.edit-profile__close-button');
-let popupSaveButton = document.querySelector('.edit-profile__save-button');
-let popupInputName = document.querySelector('.edit-profile__input_name');
-let popupInputAbout = document.querySelector('.edit-profile__input_about');
+const popup = document.querySelector('.popup');
+const form = document.querySelector('.popup__form');
+const popupCloseButton = document.querySelector('.popup__close-button');
+const popupSaveButton = document.querySelector('.popup__save-button');
+const popupInputName = document.querySelector('.popup__input_type_name');
+const popupInputAbout = document.querySelector('.popup__input_type_about');
 
 profileEditButton.addEventListener('click', () => {
   popupInputName.value = profileName.textContent;
@@ -14,7 +15,7 @@ profileEditButton.addEventListener('click', () => {
   openPopup();
 });
 
-popupSaveButton.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   profileName.textContent = popupInputName.value;
   profileDescription.textContent = popupInputAbout.value;
@@ -24,9 +25,9 @@ popupSaveButton.addEventListener('click', (event) => {
 popupCloseButton.addEventListener('click', closePopup);
 
 function openPopup() {
-  popup.classList.add('edit-profile__opened')
+  popup.classList.add('popup_opened')
 }
 
 function closePopup() {
-  popup.classList.remove('edit-profile__opened')
+  popup.classList.remove('popup_opened')
 }

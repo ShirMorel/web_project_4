@@ -1,4 +1,4 @@
-.edit-profile__form {
+.popup__form {
   width: 430px;
   background-color: white;
   flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width:768px) {
-  .edit-profile__form {
+  .popup__form {
     width: 282px;
   }
 }
