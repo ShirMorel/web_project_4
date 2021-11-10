@@ -1,0 +1,17 @@
+.card__heart-button_active {
+  background-image: url(../../../../images/blackheart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  width: 21px;
+  height: 19px;
+  transition: opacity 0.2s ease-in-out 0s;
+  padding: 0;
+  margin: 30px 18px 30px auto;
+}
+
+.card__heart-button_active:hover {
+  opacity: 0.5;
+}

@@ -1,5 +1,6 @@
-.elements__card {
+.card {
   background-color: white;
-  display: inline-block;
+  width: 282px;
   border-radius: 10px;
+  position: relative;
 }
