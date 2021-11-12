@@ -7,6 +7,7 @@ const profileAddButton = document.querySelector('.profile__add-button');
 /*popup*/
 const editPopup = document.querySelector('#edit-popup');
 const addPopup = document.querySelector('#add-popup');
+const photoPopup = document.querySelector('#photo-popup');
 const editForm = document.querySelector('#edit-form');
 const addForm = document.querySelector('#add-form');
 const popupSaveButton = document.querySelector('.popup__save-button');
@@ -56,6 +57,22 @@ function createCardElement(cardData) {
   heartButton.addEventListener('click', () => {
     heartButton.classList.toggle('card__heart-button_active')
   });
+
+  card.querySelector('.card__delete-button').addEventListener('click', (event) => {
+    const listItem = event.target.closest('.card');
+      listItem.remove();
+    });
+
+  const cardPhoto = card.querySelector('.card__photo');
+  cardPhoto.addEventListener('click', () => {
+    photoPopup.querySelector('.popup__img').style.backgroundImage = cardPhoto.style.backgroundImage;
+    photoPopup.querySelector('.popup__figcaption').textContent = card.querySelector('.card__description').textContent;
+    openPopup(photoPopup);
+  });
+
+  function openPopup(photoPopup) {
+    photoPopup.classList.add('popup_opened')
+  };
 
   return card;
 };
@@ -128,9 +145,20 @@ deleteButton.forEach(btn => btn.addEventListener('click' , () => {
 }));*/
 
 
-const deleteButton = document.querySelector('.card__delete-button');
+/*const deleteButton = document.querySelector('.card__delete-button');
 
 deleteButton.addEventListener('click', () => {
     const listItem = deleteButton.closest('.card');
     listItem.remove();
-});
+});*/
+
+
+
+/*deleteButton.addEventListener('click', event => {
+  if (event.target.className === 'card__delete-button') {
+    const listItem = deleteButton.closest('.card');
+  listItem.remove();
+  }
+});*/
+
+
