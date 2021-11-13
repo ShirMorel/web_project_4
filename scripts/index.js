@@ -1,25 +1,3 @@
-/*profile*/
-const profileName = document.querySelector('.profile__name');
-const profileDescription = document.querySelector('.profile__description');
-const profileEditButton = document.querySelector('.profile__edit-button');
-const profileAddButton = document.querySelector('.profile__add-button');
-
-/*popup*/
-const editPopup = document.querySelector('#edit-popup');
-const addPopup = document.querySelector('#add-popup');
-const photoPopup = document.querySelector('#photo-popup');
-const editForm = document.querySelector('#edit-form');
-const addForm = document.querySelector('#add-form');
-const popupSaveButton = document.querySelector('.popup__save-button');
-const popupInputName = document.querySelector('.popup__input_type_name');
-const popupInputAbout = document.querySelector('.popup__input_type_about');
-const popupInputTitle = document.querySelector('.popup__input_type_title');
-const popupInputImg = document.querySelector('.popup__input_type_img');
-
-/*cards*/
-const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
-const elements = document.querySelector('.elements');
-
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -47,6 +25,30 @@ const initialCards = [
   }
 ];
 
+/*profile*/
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+const profileEditButton = document.querySelector('.profile__edit-button');
+const profileAddButton = document.querySelector('.profile__add-button');
+
+/*popup*/
+const editPopup = document.querySelector('#edit-popup');
+const addPopup = document.querySelector('#add-popup');
+const photoPopup = document.querySelector('#photo-popup');
+const editForm = document.querySelector('#edit-form');
+const addForm = document.querySelector('#add-form');
+const popupSaveButton = document.querySelector('.popup__save-button');
+const popupInputName = document.querySelector('.popup__input_type_name');
+const popupInputAbout = document.querySelector('.popup__input_type_about');
+const popupInputTitle = document.querySelector('.popup__input_type_title');
+const popupInputImg = document.querySelector('.popup__input_type_img');
+
+/*cards*/
+const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
+const elements = document.querySelector('.elements');
+
+
+
 function createCardElement(cardData) {
   const card = cardTemplate.cloneNode(true);
 
@@ -63,16 +65,11 @@ function createCardElement(cardData) {
       listItem.remove();
     });
 
-  const cardPhoto = card.querySelector('.card__photo');
-  cardPhoto.addEventListener('click', () => {
-    photoPopup.querySelector('.popup__img').style.backgroundImage = cardPhoto.style.backgroundImage;
-    photoPopup.querySelector('.popup__figcaption').textContent = card.querySelector('.card__description').textContent;
+  card.querySelector('.card__photo').addEventListener('click', (event) => {
+    document.querySelector('.popup__img').src = cardData.link;
+    document.querySelector('.popup__figcaption').textContent = cardData.name;
     openPopup(photoPopup);
   });
-
-  function openPopup(photoPopup) {
-    photoPopup.classList.add('popup_opened')
-  };
 
   return card;
 };
@@ -136,29 +133,3 @@ addForm.addEventListener('submit', (event) => {
   const card = createCardElement(cardData);
   elements.prepend(card);
 });
-
-/*delete card*/
-/*const deleteButton = document.querySelectorAll('.card__delete-button');
-
-deleteButton.forEach(btn => btn.addEventListener('click' , () => {
-  elements.remove('.card');
-}));*/
-
-
-/*const deleteButton = document.querySelector('.card__delete-button');
-
-deleteButton.addEventListener('click', () => {
-    const listItem = deleteButton.closest('.card');
-    listItem.remove();
-});*/
-
-
-
-/*deleteButton.addEventListener('click', event => {
-  if (event.target.className === 'card__delete-button') {
-    const listItem = deleteButton.closest('.card');
-  listItem.remove();
-  }
-});*/
-
-
