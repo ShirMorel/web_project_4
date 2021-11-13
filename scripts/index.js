@@ -67,6 +67,7 @@ function createCardElement(cardData) {
 
   card.querySelector('.card__photo').addEventListener('click', (event) => {
     document.querySelector('.popup__img').src = cardData.link;
+    document.querySelector('.popup__img').alt = cardData.name;
     document.querySelector('.popup__figcaption').textContent = cardData.name;
     openPopup(photoPopup);
   });
@@ -81,10 +82,19 @@ initialCards.forEach(initialCardData => {
 /*close buttons*/
 const allCloseButtons = document.querySelectorAll('.popup__close-button');
 
-allCloseButtons.forEach(btn => btn.addEventListener('click', () => {
-  const allPopups = document.querySelectorAll('.popup');
-  allPopups.forEach(popup => popup.classList.remove('popup_opened'))
+allCloseButtons.forEach(btn => btn.addEventListener('click', (evt) => {
+  const openedPopup = evt.target.closest('.popup_opened')
+  closePopup(openedPopup)
 }));
+
+/*open and close popup*/
+function openPopup(popup) {
+  popup.classList.add('popup_opened')
+};
+
+function closePopup(popup) {
+  popup.classList.remove('popup_opened')
+};
 
 /*edit profile popup*/
 profileEditButton.addEventListener('click', () => {
@@ -92,14 +102,6 @@ profileEditButton.addEventListener('click', () => {
   popupInputAbout.value = profileDescription.textContent;
   openPopup(editPopup);
 });
-
-function openPopup(editPopup) {
-  editPopup.classList.add('popup_opened')
-};
-
-function closePopup(editPopup) {
-  editPopup.classList.remove('popup_opened')
-};
 
 /*edit form submit*/
 editForm.addEventListener('submit', (event) => {
@@ -114,14 +116,6 @@ profileAddButton.addEventListener('click', () => {
   openPopup(addPopup);
 });
 
-function openPopup(addPopup) {
-  addPopup.classList.add('popup_opened')
-};
-
-function closePopup(addPopup) {
-  addPopup.classList.remove('popup_opened')
-};
-
 /*add form submit*/
 addForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -132,4 +126,5 @@ addForm.addEventListener('submit', (event) => {
   };
   const card = createCardElement(cardData);
   elements.prepend(card);
+  document.getElementById('add-form').reset();
 });
